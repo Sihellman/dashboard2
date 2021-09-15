@@ -11,7 +11,7 @@ module.exports = function(env) {
 	var standalone = !!(env && env.standalone === "true");
 
 	var babelSettings = {
-		extends: path.join(__dirname, '/.babelrc')
+		extends: path.join(__dirname, "/.babelrc")
 	};
 
 	var config = {
@@ -62,7 +62,8 @@ module.exports = function(env) {
 			})
 		],
 		devServer:{
-			stats:"errors-only"
+			stats:"errors-only",
+			disableHostCheck: true
 		}
 	};
 
@@ -84,4 +85,4 @@ module.exports = function(env) {
 	}
 
 	return config;
-}
+};
